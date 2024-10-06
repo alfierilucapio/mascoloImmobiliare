@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'Grobek';
+    src: url('assets/Fontspring-DEMO-grobek-normalit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    font-family: 'Grobek', serif;
+}
+
+.mobileElement {
+    display: none;
+}
+
+.pcElement {
+    display: block;
+}
+
+body {
+    max-width: 100vw;
+    /* Imposta la larghezza massima al 100% della larghezza della viewport */
+    margin: 0 auto;
+    /* Centra il contenuto */
+    overflow-x: hidden;
+    /* Evita lo scroll orizzontale */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#schermata_caricamento {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    top: 0;
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-size: 15px;
+    background-color: white;
+    z-index: 1000;
+}
+
+#navMenu {
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#navMenu.active {
+    transition-delay: 0.8s;
+    transform: rotate(45deg);
+}
+
+#navMenu.active>span:nth-child(2) {
+    width: 0;
+}
+
+#navMenu.active>span:nth-child(1),
+#navMenu.active>span:nth-child(3) {
+    transition-delay: .4s;
+}
+
+#navMenu.active>span:nth-child(1) {
+    transform: translateY(9px);
+}
+
+#navMenu.active>span:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg);
+}
+
+#navMenu>span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: #1c5e3c;
+}
+
+#navMenu>span:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+#navMenu,
+#navMenu>span {
+    transition: all .4s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2vw;
+}
+
+li {
+    padding-inline: 1vw;
+}
+
+nav ul li a:hover {
+    color: #1c5e3c;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#homePage {
+    width: 100vw;
+    padding-top: 6vh;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    position: relative;
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-item img {
+    height: 56.25vw;
+    width: 100vw;
+    display: block;
+}
+
+.overlay {
+    height: 56.25vw;
+    width: 100vw;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.overlay h2 {
+    z-index: 1;
+    margin: 0;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .mobileElement {
+        display: block;
+    }
+
+    .pcElement {
+        display: none;
+    }
+
+    nav {
+        padding: 1.5vh;
+    }
+
+    nav ul {
+        width: 7.5vw;
+    }
+
+    nav li {
+        display: none;
+    }
+
+    .mostraDiv span {
+        font-size: 15px;
+    }
+
+    #mobileMenu {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: fixed;
+        /* Fissa il div nella finestra del browser */
+        top: -100%;
+        /* Inizialmente il div è fuori dalla vista in alto */
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    #mobileMenu.animazione {
+        top: 0;
+        /* Cambia da top -100% a top: 0 per far apparire il div */
+        transition: all 0.75s cubic-bezier(.215, .61, .355, 1);
+        /* Aggiunge una transizione a top e opacity */
+    }
+
+    .menuTendina {
+        height: 100%;
+    }
+
+    .menuTendina ul li button {
+        font-size: 30px;
+        border: none;
+        background-color: white;
+    }
+
+    .menuTendina ul {
+        color: black;
+        display: flex;
+        text-align: center;
+        vertical-align: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 20vh;
+        height: 80vh;
+        width: 100%;
+        top: -50px;
+    }
+
+    .menuTendina ul li {
+        display: block;
+    }
+
+    li button:hover {
+        color: #1c5e3c;
+        cursor: pointer;
+    }
+}
