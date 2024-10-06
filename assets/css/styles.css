@@ -53,6 +53,7 @@ a {
 }
 
 nav {
+    padding: 2vh;
     top: 0;
     width: 100vw;
     max-width: 100vw;
@@ -131,7 +132,7 @@ nav ul li a:hover {
 
 #homePage {
     width: 100vw;
-    padding-top: 6vh;
+    padding-top: 5vh;
 }
 
 .carousel {
@@ -169,19 +170,25 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.overlay img{
+    width: 71vw;
+    height: 40vw;
 }
 
 .button-overlay {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    border:1px solid white;
     padding: 10px;
     text-decoration: none;
-    border-radius: 5px;
+    text-transform: uppercase;
+    bottom: 3.5vw;
+    font-size: 3vw;
     z-index: 1;
 }
 
@@ -266,5 +273,9 @@ nav ul li a:hover {
     li button:hover {
         color: #1c5e3c;
         cursor: pointer;
+    }
+
+    .button-overlay {
+
     }
 }
