@@ -14,7 +14,7 @@ function animazioneMenu(){
 function mostraDiv() {
     let isCountEven = count % 2 === 0;
     
-    let mainPage = document.getElementById('mainPage');
+    let mainPage = document.getElementById('homePage');
     let div = document.getElementById('mobileMenu');
 
     if (isCountEven) {

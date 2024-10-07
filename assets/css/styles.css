@@ -1,16 +1,9 @@
-@font-face {
-    font-family: 'Grobek';
-    src: url('assets/Fontspring-DEMO-grobek-normalit.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     max-width: 100vw;
-    font-family: 'Grobek', serif;
+    font-family: "Playfair Display", serif;
 }
 
 .mobileElement {
@@ -132,7 +125,7 @@ nav ul li a:hover {
 
 #homePage {
     width: 100vw;
-    padding-top: 5vh;
+    padding-top: 4.5vh;
 }
 
 .carousel {
