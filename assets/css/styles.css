@@ -199,6 +199,7 @@ nav ul li a:hover {
     transform: translateY(-50%);
     color: white;
     border: none;
+    height: 100%;
     padding: 15px;
     cursor: pointer;
     z-index: 1;
