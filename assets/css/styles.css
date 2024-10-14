@@ -152,7 +152,7 @@ nav ul li a:hover {
 }
 
 .carousel-item img {
-    height:50%;
+    height: 50%;
     display: block;
 }
 
@@ -169,7 +169,7 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.overlay img{
+.overlay img {
     width: 71vw;
     height: 40vw;
 }
@@ -177,7 +177,7 @@ nav ul li a:hover {
 .button-overlay {
     position: absolute;
     color: white;
-    border:1px solid white;
+    border: 1px solid white;
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -186,13 +186,15 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-.carousel-control-prev, .carousel-control-next{
-    color:white;
-    border:none;
+.carousel-control-prev,
+.carousel-control-next {
+    color: white;
+    border: none;
     background-color: rgba(0, 0, 0, 0);
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
     font-size: 3vw;
     position: absolute;
     top: 50%;
@@ -211,6 +213,51 @@ nav ul li a:hover {
 
 .carousel-control-next {
     right: 15px;
+}
+
+.video-section {
+    position: relative;
+    height: 600vh; /* Imposta un'altezza sufficiente per l'effetto di scrolling */
+}
+
+.videoScrolling {
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; /* Puoi regolare la larghezza secondo le tue necessità */
+    margin: 0 auto;
+}
+
+.video-overlay {
+    position: absolute; /* Posizionamento assoluto rispetto al video */
+    top: 0; /* Allinea l'overlay con la parte superiore del video */
+    left: 0; /* Allinea l'overlay con il lato sinistro del video */
+    width: 100%; /* L'overlay occuperà tutta la larghezza del video */
+    height: 100%; /* L'overlay occuperà tutta l'altezza del video */
+    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente */
+    color: white; /* Colore del testo */
+    display: flex; /* Usa flexbox per centrare il contenuto */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    opacity: 0; /* Inizialmente invisibile */
+    transition: opacity 1s ease-in-out; /* Transizione fluida per l'opacità */
+    visibility: hidden; /* Inizialmente non visibile */
+    z-index: 1; /* Assicurati che sia sopra il video */
+}
+
+.video-overlay.show {
+    opacity: 1; /* Rendi l'overlay visibile quando viene mostrato */
+    visibility: visible; /* Assicurati che l'overlay sia visibile */
+}
+
+/* Icona fissa in basso a destra */
+.floating-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
 }
 
 @media screen and (max-width: 600px) {
