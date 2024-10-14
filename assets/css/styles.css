@@ -28,7 +28,7 @@ html {
 }
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -156,36 +156,6 @@ nav ul li a:hover {
     display: block;
 }
 
-.overlay {
-    height: 56.25vw;
-    width: 100vw;
-    position: absolute;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.overlay img {
-    width: 71vw;
-    height: 40vw;
-}
-
-.button-overlay {
-    position: absolute;
-    color: white;
-    border: 1px solid white;
-    padding: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    bottom: 3.5vw;
-    font-size: 3vw;
-    z-index: 1;
-}
-
 .carousel-control-prev,
 .carousel-control-next {
     color: white;
@@ -215,39 +185,59 @@ nav ul li a:hover {
     right: 15px;
 }
 
-.video-section {
+#progetti {
     position: relative;
-    height: 600vh; /* Imposta un'altezza sufficiente per l'effetto di scrolling */
 }
 
-.videoScrolling {
-    position: sticky;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%; /* Puoi regolare la larghezza secondo le tue necessità */
-    margin: 0 auto;
+#progetti div {
+    position: relative;
 }
 
-.video-overlay {
-    position: absolute; /* Posizionamento assoluto rispetto al video */
-    top: 0; /* Allinea l'overlay con la parte superiore del video */
-    left: 0; /* Allinea l'overlay con il lato sinistro del video */
-    width: 100%; /* L'overlay occuperà tutta la larghezza del video */
-    height: 100%; /* L'overlay occuperà tutta l'altezza del video */
-    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente */
-    color: white; /* Colore del testo */
-    display: flex; /* Usa flexbox per centrare il contenuto */
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
-    opacity: 0; /* Inizialmente invisibile */
-    transition: opacity 1s ease-in-out; /* Transizione fluida per l'opacità */
-    visibility: hidden; /* Inizialmente non visibile */
-    z-index: 1; /* Assicurati che sia sopra il video */
+#progetti img {
+    width: 100%;
+    height: auto;
 }
 
-.video-overlay.show {
-    opacity: 1; /* Rendi l'overlay visibile quando viene mostrato */
-    visibility: visible; /* Assicurati che l'overlay sia visibile */
+#progetti .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Colore di sfondo semi-trasparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* Colore del testo */
+}
+
+.overlay button{
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid white;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    bottom: 8.5vw;
+    font-size: 2.5vw;
+    z-index: 1;
+    transition-duration: 0.5s;
+}
+
+.overlay button:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 2.8vw;
+}
+
+.overlay h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 6vw;
 }
 
 /* Icona fissa in basso a destra */
