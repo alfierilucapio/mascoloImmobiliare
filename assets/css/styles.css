@@ -225,7 +225,7 @@ nav ul li a:hover {
     bottom: 8.5vw;
     font-size: 2.5vw;
     z-index: 1;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
 .overlay button:hover{
@@ -243,11 +243,58 @@ nav ul li a:hover {
 /* Icona fissa in basso a destra */
 .floating-icon {
     position: fixed;
-    bottom: 20px;
+    bottom: 90px;
     right: 20px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1000;
+}
+
+footer{
+    display: flex;
+    padding: 5px;
+    width: 100%;
+}
+
+footer h2{
+    padding-left: 4vw;
+    font-size:2vw;
+}
+
+.footerc {
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.footerc__socials{
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 4vw;
+}
+
+.contact__icon-box {
+    display: flex;
+    align-items: center;
+}
+
+.contact__icons {
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10vh;
+}
+
+.contact__icon-box svg {
+    width: 16px;
+    transition-duration: 0.3s;
+}
+
+.contact__icon-box svg:hover {
+    fill:#1c5e3c;
+    stroke:#1c5e3c;
+    width: 20px;
 }
 
 @media screen and (max-width: 600px) {
