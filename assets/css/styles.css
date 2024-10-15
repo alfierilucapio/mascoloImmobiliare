@@ -33,7 +33,7 @@ html {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: white;
+    background-color: #fcfcf9;
     z-index: 9999;
     display: flex;
     justify-content: center;
