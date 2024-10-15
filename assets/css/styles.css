@@ -258,8 +258,40 @@ h1{
     text-align: center;
 }
 
+#contattaci a{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.contact__links {
+    padding-top: 2vw;
+}
+
 .contact__info{
     padding-left:2vw;
+}
+
+.contact__icon-box {
+    display: flex;
+    align-items: center;
+}
+
+.contact__icons {
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10vh;
+}
+
+.contact__icon-box svg {
+    width: 20px;
+    transition-duration: 0.3s;
+}
+
+.contact__icon-box svg:hover {
+    fill:#1c5e3c;
+    stroke:#1c5e3c;
+    width: 25px;
 }
 
 /* Icona fissa in basso a destra */
@@ -294,29 +326,6 @@ footer h2{
     display: flex;
     justify-content: space-around;
     padding-right: 4vw;
-}
-
-.contact__icon-box {
-    display: flex;
-    align-items: center;
-}
-
-.contact__icons {
-    width: 40vw;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10vh;
-}
-
-.contact__icon-box svg {
-    width: 20px;
-    transition-duration: 0.3s;
-}
-
-.contact__icon-box svg:hover {
-    fill:#1c5e3c;
-    stroke:#1c5e3c;
-    width: 25px;
 }
 
 @media screen and (max-width: 600px) {
