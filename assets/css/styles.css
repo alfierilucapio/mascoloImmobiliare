@@ -268,6 +268,7 @@ nav ul li a:hover {
 }
 
 h1{
+    color:#1c5e3c;
     text-align: center;
     padding-top:4vw;
     padding-bottom:4vw;
@@ -288,6 +289,10 @@ h1{
 #contattaci>a{
     font-size: 20px;
     text-decoration: underline;
+}
+
+#contattaci>a:hover{
+    color:#1c5e3c;
 }
 
 .contact__links {
@@ -319,7 +324,7 @@ h1{
 }
 
 #contatti{
-    padding-bottom: 4vw;
+    padding-bottom: 10vw;
 }
 
 /* Icona fissa in basso a destra */
