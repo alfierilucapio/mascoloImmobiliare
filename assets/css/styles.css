@@ -258,7 +258,7 @@ h1{
     text-align: center;
 }
 
-#contattaci a{
+#contattaci>a{
     font-size: 20px;
     text-decoration: underline;
 }
