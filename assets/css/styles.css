@@ -152,7 +152,7 @@ nav ul li a:hover {
 }
 
 .carousel-item img {
-    height: 50%;
+    height: 35%;
     display: block;
 }
 
@@ -240,10 +240,10 @@ nav ul li a:hover {
     font-size: 6vw;
 }
 
-h1{
+#progetti h1{
     text-align: center;
-    padding-top:2vw;
-    padding-bottom:2vw;
+    padding-top:4vw;
+    padding-bottom:4vw;
 }
 
 #suDiNoi{
