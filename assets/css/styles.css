@@ -271,9 +271,17 @@ h1{
     padding-left:2vw;
 }
 
+.contact__info a:hover{
+    color:#1c5e3c;
+}
+
 .contact__icon-box {
     display: flex;
     align-items: center;
+}
+
+.contact__icon-box svg{
+    height: 20px;
 }
 
 .contact__icons {
@@ -281,17 +289,6 @@ h1{
     display: flex;
     justify-content: space-around;
     padding-top: 10vh;
-}
-
-.contact__icon-box svg {
-    width: 20px;
-    transition-duration: 0.3s;
-}
-
-.contact__icon-box svg:hover {
-    fill:#1c5e3c;
-    stroke:#1c5e3c;
-    width: 25px;
 }
 
 /* Icona fissa in basso a destra */
@@ -326,6 +323,17 @@ footer h2{
     display: flex;
     justify-content: space-around;
     padding-right: 4vw;
+}
+
+.footerc__socials svg {
+    width: 20px;
+    transition-duration: 0.3s;
+}
+
+.footerc__socials svg:hover {
+    fill:#1c5e3c;
+    stroke:#1c5e3c;
+    width: 25px;
 }
 
 @media screen and (max-width: 600px) {
