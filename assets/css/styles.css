@@ -291,6 +291,10 @@ h1{
     padding-top: 10vh;
 }
 
+#contatti{
+    padding-bottom: 4vw;
+}
+
 /* Icona fissa in basso a destra */
 .floating-icon {
     position: fixed;
