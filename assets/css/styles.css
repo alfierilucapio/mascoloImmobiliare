@@ -27,6 +27,33 @@ html {
     scroll-behavior: smooth;
 }
 
+#schermata_caricamento {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video_caricamento {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-out.hidden {
+    opacity: 0;
+}
+
 a {
     color: black;
     text-decoration: none;
