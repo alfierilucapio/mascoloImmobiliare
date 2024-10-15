@@ -240,6 +240,28 @@ nav ul li a:hover {
     font-size: 6vw;
 }
 
+h1{
+    text-align: center;
+    padding-top:2vw;
+    padding-bottom:2vw;
+}
+
+#suDiNoi{
+    text-align: center;
+    padding: 2vw;
+}
+
+#contattaci{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact__info{
+    padding-left:2vw;
+}
+
 /* Icona fissa in basso a destra */
 .floating-icon {
     position: fixed;
@@ -373,5 +395,9 @@ footer h2{
     .menuTendina button:hover {
         color: #1c5e3c;
         cursor: pointer;
+    }
+
+    footer h2{
+        font-size:2.5vw;
     }
 }
