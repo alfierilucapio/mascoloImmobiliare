@@ -309,14 +309,14 @@ footer h2{
 }
 
 .contact__icon-box svg {
-    width: 16px;
+    width: 20px;
     transition-duration: 0.3s;
 }
 
 .contact__icon-box svg:hover {
     fill:#1c5e3c;
     stroke:#1c5e3c;
-    width: 20px;
+    width: 25px;
 }
 
 @media screen and (max-width: 600px) {
