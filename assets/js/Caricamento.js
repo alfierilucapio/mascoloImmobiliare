@@ -1,23 +1,14 @@
-/* let videoEnded = false;
-let pageLoaded = false;
+// Funzione per precaricare l'immagine
+function preloadImage(url) {
+    var img = new Image();
+    img.src = url;
+}
 
-let vid = document.getElementById("video_caricamento");
-vid.onended = function() {
-    videoEnded=true;
-};
+// Precarica l'immagine prima che il DOM sia completamente caricato
+preloadImage('/assets/images/CaricamentoMascoloImmobiliare-transparente.gif');
 
-document.addEventListener("DOMContentLoaded", () => {
-    pageLoaded=true;
-  });
-
-if(videoEnded&&pageLoaded==true){
-    if (videoEnded && pageLoaded) {
-        document.getElementById("schermata_caricamento").style.display = "none";
-    }
-} */
-
-// Durata della GIF in millisecondi (esempio: 5 secondi)
-const gifDuration = 2580;
+// Durata della GIF in millisecondi
+const gifDuration = 1810;
 let pageLoaded = false;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -33,7 +24,7 @@ function onGifEnd() {
             div.style.display = 'none';
         }, 500); // Tempo di transizione in millisecondi
     }else{
-        gifDuration = gifDuration + 2580;
+        gifDuration = gifDuration + 1810;
     }
 }
 
