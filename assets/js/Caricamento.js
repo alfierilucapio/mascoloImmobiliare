@@ -1,23 +1,19 @@
-// Funzione per precaricare l'immagine
-function preloadImage(url) {
-    var img = new Image();
-    img.src = url;
-}
-
-// Precarica l'immagine prima che il DOM sia completamente caricato
-preloadImage('/assets/images/CaricamentoMascoloImmobiliare-transparente.gif');
-
 // Durata della GIF in millisecondi
 const gifDuration = 1810;
 let pageLoaded = false;
+let DOMContentLoaded = false;
 
 document.addEventListener("DOMContentLoaded", () => {
-    pageLoaded=true;
+    DOMContentLoaded=true;
 });
+
+window.onload = function(){
+    pageLoaded = true;
+}
 
 // Funzione da eseguire al termine della GIF
 function onGifEnd() {
-    if(pageLoaded){
+    if(pageLoaded && DOMContentLoaded){
         const div = document.getElementById('schermata_caricamento');
         div.classList.add('hidden');
         setTimeout(() => {
