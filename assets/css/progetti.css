@@ -1,0 +1,48 @@
+#videoProgetto h1 {
+    padding-top: 7.5vh;
+}
+
+#descrizione,
+#caratteristiche {
+    padding: 5vw;
+}
+
+#descrizione h2 {
+    color: #1c5e3c;
+}
+
+.downloads{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#spanBrochure , #spanMappa{
+    padding: 2vw;
+    font-size: 15px;
+}
+
+.infoButtons{
+    background-color: #1c5e3c;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+.infoButtons button {
+    border: none;
+    background-color: #1c5e3c;
+    padding:7px;
+}
+
+.brochureButton{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-right: 0;
+}
+
+.mapButton{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 0;
+}
