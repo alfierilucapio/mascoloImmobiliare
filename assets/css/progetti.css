@@ -11,6 +11,38 @@
     color: #1c5e3c;
 }
 
+.caratteristiche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caratteristiche p {
+    color:#1c5e3c;
+    font-size:20px;
+    padding:5vw;
+}
+
+.icons{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding-bottom: 5vw;
+}
+
+.icons>svg{
+    height: 80px;
+    width: 80px;
+    margin-top:10vw;
+    margin-bottom:10vw;
+    padding: 10px;
+    border: 2px solid #1c5e3c;
+    border-radius:50%;
+    fill:#1c5e3c;
+}
+
 .downloads{
     display: flex;
     justify-content: center;
@@ -32,6 +64,10 @@
     border: none;
     background-color: #1c5e3c;
     padding:7px;
+}
+
+.infoButtons button:hover{
+    cursor: pointer;
 }
 
 .brochureButton{
