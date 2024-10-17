@@ -274,9 +274,12 @@ h1{
     padding-bottom:4vw;
 }
 
+#about{
+    padding:10vw;
+}
+
 #suDiNoi{
     text-align: center;
-    padding: 2vw;
 }
 
 #contattaci{
@@ -296,7 +299,7 @@ h1{
 }
 
 .contact__links {
-    padding-top: 2vw;
+    padding-top: 6vw;
 }
 
 .contact__info{
@@ -324,7 +327,7 @@ h1{
 }
 
 #contatti{
-    padding-bottom: 10vw;
+    padding-bottom: 15vw;
 }
 
 /* Icona fissa in basso a destra */
