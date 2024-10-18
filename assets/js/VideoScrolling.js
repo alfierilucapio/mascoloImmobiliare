@@ -1,10 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var video = document.getElementById("videoProgetto");
-    video.play().catch(function(error) {
-        console.error("Errore durante l'avvio del video:", error);
-    });
-});
-
 /* let lastScrollPosition = 0;
 let ticking = false;
 
