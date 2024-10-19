@@ -12,11 +12,10 @@ function onGifEnd() {
     if(pageLoaded){
         const div = document.getElementById('schermata_caricamento');
         div.classList.add('hidden');
-        
-    }else{
         setTimeout(() => {
             div.style.display = 'none';
         }, 500); // Tempo di transizione in millisecondi
+    }else{
         gifDuration = gifDuration + 1710;
     }
 }
