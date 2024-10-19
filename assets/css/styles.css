@@ -158,6 +158,7 @@ nav ul li a:hover {
 
 .carousel {
     background-color: #1c5e3c;
+    opacity: 0.5;
     position: relative;
     width: 100%;
     max-width: 100vw;
