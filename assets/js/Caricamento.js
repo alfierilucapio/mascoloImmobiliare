@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function onGifEnd() {
     if(pageLoaded){
         const div = document.getElementById('schermata_caricamento');
+        const tour = document.getElementById('tourVirtuale');
         div.classList.add('hidden');
+        tour.style.display = 'block';
         setTimeout(() => {
             div.style.display = 'none';
         }, 500); // Tempo di transizione in millisecondi
