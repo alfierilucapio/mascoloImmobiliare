@@ -93,6 +93,7 @@ nav {
     border: none;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
+    z-index: 999;
 }
 
 #navMenu.active {
