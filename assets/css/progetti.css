@@ -27,7 +27,6 @@
     transition: opacity 0.5s ease-in-out;
     /* Transizione di 0.5 secondi */
     cursor: pointer;
-    z-index: 2;
 }
 
 .overlayTourVirtuale img {
