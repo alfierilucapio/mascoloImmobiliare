@@ -3,19 +3,22 @@ const gifDuration = 1710;
 let pageLoaded = false;
 
 document.addEventListener("DOMContentLoaded", () => {
-    pageLoaded=true;
-    document.getElementById('video_caricamento').style.display = 'block';
+    pageLoaded = true;
+    const videoCaricamento = document.getElementById('video_caricamento');
+    if (videoCaricamento) {
+        videoCaricamento.style.display = 'block';
+    }
 });
 
 // Funzione da eseguire al termine della GIF
 function onGifEnd() {
-    if(pageLoaded){
+    if (pageLoaded) {
         const div = document.getElementById('schermata_caricamento');
         div.classList.add('hidden');
         setTimeout(() => {
             div.style.display = 'none';
         }, 500); // Tempo di transizione in millisecondi
-    }else{
+    } else {
         gifDuration = gifDuration + 1710;
     }
 }
