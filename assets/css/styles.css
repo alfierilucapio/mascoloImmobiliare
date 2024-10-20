@@ -296,11 +296,6 @@ h1{
 
 #contattaci>a{
     font-size: 20px;
-    text-decoration: underline;
-}
-
-#contattaci>a:hover{
-    color:#1c5e3c;
 }
 
 .contact__links {
@@ -309,6 +304,10 @@ h1{
 
 .contact__info{
     padding-left:2vw;
+}
+
+.contact__info a{
+    text-decoration: underline;
 }
 
 .contact__info a:hover{
