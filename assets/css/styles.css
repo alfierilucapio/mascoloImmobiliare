@@ -346,13 +346,16 @@ h1{
 
 footer{
     display: flex;
-    padding: 5px;
+    padding: 2vw;
     width: 100%;
+    background-color: #496959;
+    margin-top: 4vw;
 }
 
 footer h2{
     padding-left: 4vw;
-    font-size:2vw;
+    font-size:1.5vw;
+    color: white;
 }
 
 .footerc {
@@ -371,11 +374,13 @@ footer h2{
 .footerc__socials svg {
     width: 20px;
     transition-duration: 0.3s;
+    fill: white;
+    stroke:white;
 }
 
 .footerc__socials svg:hover {
-    fill:#1c5e3c;
-    stroke:#1c5e3c;
+    fill:wheat;
+    stroke:wheat;
     width: 25px;
 }
 
