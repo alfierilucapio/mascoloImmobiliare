@@ -88,6 +88,10 @@ nav {
     z-index: 1000;
 }
 
+nav #logo:hover{
+    cursor: pointer;
+}
+
 #navMenu {
     height: 30px;
     border: none;

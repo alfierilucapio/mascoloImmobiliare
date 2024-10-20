@@ -18,8 +18,8 @@ function nascondiSchermataCaricamento() {
     const tour = document.getElementById('tourVirtuale');
     if (divCaricamento) {
         divCaricamento.classList.add('hidden');
+        tour.style.display = 'block';
         setTimeout(() => {
-            tour.style.display = 'block';
             divCaricamento.style.display = 'none';
         }, 500); // Tempo di transizione in millisecondi
     } else {
