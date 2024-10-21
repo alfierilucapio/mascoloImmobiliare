@@ -3,6 +3,7 @@
 }
 
 #tourVirtuale h1 {
+    text-transform: uppercase;
     padding-top: 7.5vh;
 }
 
@@ -214,7 +215,7 @@
     position: relative;
     margin: auto;
     padding: 0;
-    width: 80%;
+    width: 100vw;
     max-width: 700px;
 }
 
