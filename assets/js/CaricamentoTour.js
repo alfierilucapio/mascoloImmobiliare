@@ -7,6 +7,8 @@ function mostraGifCaricamento() {
     const videoCaricamento = document.getElementById('video_caricamento');
     if (videoCaricamento) {
         videoCaricamento.style.display = 'block';
+        // Esegui la funzione al termine della durata della GIF
+        setTimeout(onGifEnd, gifDuration);
     } else {
         console.warn("Elemento 'video_caricamento' non trovato.");
     }
@@ -37,11 +39,8 @@ function onGifEnd() {
     }
 }
 
-// Evento DOMContentLoaded per indicare che la pagina è caricata
-document.addEventListener("DOMContentLoaded", () => {
+// Evento load per indicare che tutte le risorse della pagina sono caricate
+window.addEventListener("load", () => {
     pageLoaded = true;
     mostraGifCaricamento();
 });
-
-// Esegui la funzione al termine della durata della GIF
-setTimeout(onGifEnd, gifDuration);
