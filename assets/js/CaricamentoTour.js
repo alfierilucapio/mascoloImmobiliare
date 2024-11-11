@@ -39,8 +39,12 @@ function onGifEnd() {
     }
 }
 
+// Evento DOMContentLoaded per indicare che la pagina è caricata
+document.addEventListener("DOMContentLoaded", () => {
+    mostraGifCaricamento();
+});
+
 // Evento load per indicare che tutte le risorse della pagina sono caricate
 window.addEventListener("load", () => {
     pageLoaded = true;
-    mostraGifCaricamento();
 });
