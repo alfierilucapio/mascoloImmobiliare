@@ -13,7 +13,7 @@ function mostraGifCaricamento() {
 }
 
 // Funzione per nascondere la schermata di caricamento
-window.onload = function nascondiSchermataCaricamento() {
+function nascondiSchermataCaricamento() {
     const divCaricamento = document.getElementById('schermata_caricamento');
     if (divCaricamento) {
         divCaricamento.classList.add('hidden');
@@ -36,7 +36,7 @@ function onGifEnd() {
 }
 
 // Evento DOMContentLoaded per indicare che la pagina è caricata
-document.addEventListener('load', (event) => {
+document.addEventListener("DOMContentLoaded", () => {
     pageLoaded = true;
     mostraGifCaricamento();
 });
