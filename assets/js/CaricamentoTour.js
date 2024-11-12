@@ -42,9 +42,34 @@ function onGifEnd() {
 // Evento DOMContentLoaded per indicare che la pagina è caricata
 document.addEventListener("DOMContentLoaded", () => {
     mostraGifCaricamento();
+    verificaCaricamentoImmaginiLeggere(); // Chiamata alla funzione per verificare il caricamento delle immagini leggere
 });
 
 // Evento load per indicare che tutte le risorse della pagina sono caricate
 window.addEventListener("load", () => {
     pageLoaded = true;
+    nascondiSchermataCaricamento();
 });
+
+// Funzione per verificare il caricamento delle immagini leggere
+function verificaCaricamentoImmaginiLeggere() {
+    const immaginiLeggere = document.querySelectorAll('img[data-leggero="true"]');
+    let immaginiCaricate = 0;
+
+    immaginiLeggere.forEach((img) => {
+        if (img.complete) {
+            immaginiCaricate++;
+        } else {
+            img.addEventListener('load', () => {
+                immaginiCaricate++;
+                if (immaginiCaricate === immaginiLeggere.length) {
+                    nascondiSchermataCaricamento();
+                }
+            });
+        }
+    });
+
+    if (immaginiCaricate === immaginiLeggere.length) {
+        nascondiSchermataCaricamento();
+    }
+}
