@@ -53,15 +53,19 @@ window.addEventListener("load", () => {
 
 // Funzione per verificare il caricamento delle immagini leggere
 function verificaCaricamentoImmaginiLeggere() {
-    const immaginiLeggere = document.querySelectorAll('img[data-leggero="true"]');
+    const immaginiLeggere = document.querySelectorAll('[data-leggero="true"]');
     let immaginiCaricate = 0;
+
+    console.log(`Trovate ${immaginiLeggere.length} immagini leggere.`);
 
     immaginiLeggere.forEach((img) => {
         if (img.complete) {
             immaginiCaricate++;
+            console.log(`Immagine già caricata: ${img.src}`);
         } else {
             img.addEventListener('load', () => {
                 immaginiCaricate++;
+                console.log(`Immagine caricata: ${img.src}`);
                 if (immaginiCaricate === immaginiLeggere.length) {
                     nascondiSchermataCaricamento();
                 }
