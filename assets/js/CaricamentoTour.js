@@ -34,6 +34,7 @@ function onGifEnd() {
     if (pageLoaded) {
         nascondiSchermataCaricamento();
     } else {
+        verificaCaricamentoImmaginiLeggere();
         gifDuration += 1710; // Aumenta la durata e riattiva il timeout
         setTimeout(onGifEnd, gifDuration);
     }
@@ -47,4 +48,28 @@ document.addEventListener("DOMContentLoaded", () => {
 // Evento load per indicare che tutte le risorse della pagina sono caricate
 window.addEventListener("load", () => {
     pageLoaded = true;
+    nascondiSchermataCaricamento();
 });
+
+// Funzione per verificare il caricamento delle immagini leggere
+function verificaCaricamentoImmaginiLeggere() {
+    const immaginiLeggere = document.querySelectorAll('img[data-leggero="true"]');
+    let immaginiCaricate = 0;
+
+    immaginiLeggere.forEach((img) => {
+        if (img.complete) {
+            immaginiCaricate++;
+        } else {
+            img.addEventListener('load', () => {
+                immaginiCaricate++;
+                if (immaginiCaricate === immaginiLeggere.length) {
+                    nascondiSchermataCaricamento();
+                }
+            });
+        }
+    });
+
+    if (immaginiCaricate === immaginiLeggere.length) {
+        nascondiSchermataCaricamento();
+    }
+}
