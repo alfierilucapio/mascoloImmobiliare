@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Evento load per indicare che tutte le risorse della pagina sono caricate
-window.addEventListener("load", () => {
+/* window.addEventListener("load", () => {
     pageLoaded = true;
     nascondiSchermataCaricamento();
-});
+}); */
 
 // Funzione per verificare il caricamento delle immagini leggere
 /* function verificaCaricamentoImmaginiLeggere() {
