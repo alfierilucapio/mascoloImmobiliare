@@ -33,7 +33,7 @@ html {
     position: fixed;
     left: 0;
     top: 0;
-    background-color:white;
+    background-color: white;
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -88,7 +88,7 @@ nav {
     z-index: 1000;
 }
 
-nav #logo:hover{
+nav #logo:hover {
     cursor: pointer;
 }
 
@@ -246,7 +246,7 @@ nav ul li a:hover {
     /* Colore del testo */
 }
 
-.overlay button{
+.overlay button {
     position: absolute;
     color: white;
     background-color: rgba(0, 0, 0, 0.4);
@@ -260,41 +260,41 @@ nav ul li a:hover {
     transition-duration: 0.3s;
 }
 
-.overlay button:hover{
+.overlay button:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 2.8vw;
 }
 
-.overlay h2{
+.overlay h2 {
     text-align: center;
     text-transform: uppercase;
     font-size: 6vw;
 }
 
-h1{
-    color:#1c5e3c;
+h1 {
+    color: #1c5e3c;
     text-align: center;
-    padding-top:4vw;
-    padding-bottom:4vw;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
 }
 
-#about{
-    padding:10vw;
+#about {
+    padding: 10vw;
 }
 
-#suDiNoi{
+#suDiNoi {
     text-align: center;
 }
 
-#contattaci{
+#contattaci {
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
 }
 
-#contattaci>a{
+#contattaci>a {
     font-size: 20px;
 }
 
@@ -302,16 +302,16 @@ h1{
     padding-top: 6vw;
 }
 
-.contact__info{
-    padding-left:2vw;
+.contact__info {
+    padding-left: 2vw;
 }
 
-.contact__info a{
+.contact__info a {
     text-decoration: underline;
 }
 
-.contact__info a:hover{
-    color:#1c5e3c;
+.contact__info a:hover {
+    color: #1c5e3c;
 }
 
 .contact__icon-box {
@@ -319,7 +319,7 @@ h1{
     align-items: center;
 }
 
-.contact__icon-box svg{
+.contact__icon-box svg {
     height: 20px;
 }
 
@@ -330,7 +330,7 @@ h1{
     padding-top: 10vh;
 }
 
-#contatti{
+#contatti {
     padding-bottom: 15vw;
 }
 
@@ -344,18 +344,24 @@ h1{
     z-index: 1000;
 }
 
-footer{
+footer {
     display: flex;
+    flex-direction: column;
     padding: 2vw;
     width: 100%;
     background-color: #496959;
     margin-top: 4vw;
 }
 
-footer h2{
-    padding-left: 4vw;
-    font-size:1.5vw;
+.footer {
+    display: flex;
+}
+
+footer h2 {
+    margin-inline: 16vw;
+    font-size: 1.5vw;
     color: white;
+    text-align: center;
 }
 
 .footerc {
@@ -364,7 +370,12 @@ footer h2{
     display: flex;
 }
 
-.footerc__socials{
+.footerc img {
+    padding-left: 4vw;
+    width: 33%;
+}
+
+.footerc__socials {
     width: 33%;
     display: flex;
     justify-content: space-around;
@@ -375,12 +386,12 @@ footer h2{
     width: 20px;
     transition-duration: 0.3s;
     fill: white;
-    stroke:white;
+    stroke: white;
 }
 
 .footerc__socials svg:hover {
-    fill:wheat;
-    stroke:wheat;
+    fill: wheat;
+    stroke: wheat;
     width: 25px;
 }
 
@@ -460,9 +471,5 @@ footer h2{
     .menuTendina button:hover {
         color: #1c5e3c;
         cursor: pointer;
-    }
-
-    footer h2{
-        font-size:2.5vw;
     }
 }
