@@ -395,6 +395,21 @@ footer h2 {
     width: 25px;
 }
 
+.credits {
+    padding-top: 1vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vw;
+}
+
+.credits a {
+    font-size: 1.5vw;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 600px) {
 
     .mobileElement {
