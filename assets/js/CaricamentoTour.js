@@ -42,6 +42,7 @@ function onGifEnd() {
 // Evento DOMContentLoaded per indicare che la pagina è caricata
 document.addEventListener("DOMContentLoaded", () => {
     mostraGifCaricamento();
+    pageLoaded = true;
     // verificaCaricamentoImmaginiLeggere(); // Chiamata alla funzione per verificare il caricamento delle immagini leggere
 });
 
