@@ -1,6 +1,7 @@
 // Durata della GIF in millisecondi (esempio: 5 secondi)
 let gifDuration = 1710;
 let pageLoaded = false;
+let imgLoaded = false;
 
 // Funzione per mostrare la GIF di caricamento
 function mostraGifCaricamento() {
@@ -31,7 +32,7 @@ function nascondiSchermataCaricamento() {
 
 // Funzione da eseguire al termine della GIF
 function onGifEnd() {
-    if (pageLoaded) {
+    if (pageLoaded&&imgLoaded) {
         nascondiSchermataCaricamento();
     } else {
         gifDuration += 1710; // Aumenta la durata e riattiva il timeout
@@ -75,6 +76,7 @@ function verificaCaricamentoImmaginiLeggere() {
     });
 
     if (immaginiCaricate === immaginiLeggere.length) {
+        imgLoaded = true;
         nascondiSchermataCaricamento();
     }
 }
