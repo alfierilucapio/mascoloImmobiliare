@@ -82,7 +82,7 @@ function verificaCaricamentoImmaginiLeggere() {
                 immaginiCaricate++;
                 console.log(`Immagine caricata: ${img.src}`);
                 if (immaginiCaricate === immaginiLeggere.length) {
-                    nascondiSchermataCaricamento();
+                    imgLoaded = true;
                 }
             });
         }
@@ -90,6 +90,5 @@ function verificaCaricamentoImmaginiLeggere() {
 
     if (immaginiCaricate === immaginiLeggere.length) {
         imgLoaded = true;
-        nascondiSchermataCaricamento();
     }
 }
