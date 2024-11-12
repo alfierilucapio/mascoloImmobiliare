@@ -42,7 +42,7 @@ function onGifEnd() {
 // Evento DOMContentLoaded per indicare che la pagina è caricata
 document.addEventListener("DOMContentLoaded", () => {
     mostraGifCaricamento();
-    verificaCaricamentoImmaginiLeggere(); // Chiamata alla funzione per verificare il caricamento delle immagini leggere
+    // verificaCaricamentoImmaginiLeggere(); // Chiamata alla funzione per verificare il caricamento delle immagini leggere
 });
 
 // Evento load per indicare che tutte le risorse della pagina sono caricate
@@ -52,7 +52,7 @@ window.addEventListener("load", () => {
 });
 
 // Funzione per verificare il caricamento delle immagini leggere
-function verificaCaricamentoImmaginiLeggere() {
+/* function verificaCaricamentoImmaginiLeggere() {
     const immaginiLeggere = document.querySelectorAll('[data-leggero="true"]');
     let immaginiCaricate = 0;
 
@@ -76,4 +76,4 @@ function verificaCaricamentoImmaginiLeggere() {
     if (immaginiCaricate === immaginiLeggere.length) {
         nascondiSchermataCaricamento();
     }
-}
+} */
