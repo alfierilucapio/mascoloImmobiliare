@@ -34,7 +34,6 @@ function onGifEnd() {
     if (pageLoaded) {
         nascondiSchermataCaricamento();
     } else {
-        verificaCaricamentoImmaginiLeggere();
         gifDuration += 1710; // Aumenta la durata e riattiva il timeout
         setTimeout(onGifEnd, gifDuration);
     }
@@ -43,6 +42,7 @@ function onGifEnd() {
 // Evento DOMContentLoaded per indicare che la pagina è caricata
 document.addEventListener("DOMContentLoaded", () => {
     mostraGifCaricamento();
+    verificaCaricamentoImmaginiLeggere(); // Chiamata alla funzione per verificare il caricamento delle immagini leggere
 });
 
 // Evento load per indicare che tutte le risorse della pagina sono caricate
