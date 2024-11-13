@@ -87,7 +87,7 @@
 .icons {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     padding-bottom: 15vw;
 }
@@ -297,6 +297,10 @@
 
     .caratteristiche>p{
         font-size: 5vw;
+    }
+
+    .icons {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     #spanBrochure, #spanMappa {
