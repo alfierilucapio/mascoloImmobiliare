@@ -83,12 +83,16 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    font-size: 15px;
+    font-size: 1.5vw;
     background-color: white;
     z-index: 1000;
 }
 
-nav #logo:hover {
+#logo{
+    width: 13%;
+}
+
+#logo:hover {
     cursor: pointer;
 }
 
@@ -266,17 +270,19 @@ nav ul li a:hover {
     font-size: 2.8vw;
 }
 
-.overlay h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 6vw;
-}
-
-h1 {
+h1, h2 {
     color: #1c5e3c;
     text-align: center;
     padding-top: 4vw;
     padding-bottom: 4vw;
+    font-size:2.5vw;
+}
+
+.overlay h2 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 6vw;
 }
 
 #about {
@@ -287,6 +293,10 @@ h1 {
     text-align: center;
 }
 
+p {
+    font-size: 1.5vw;
+}
+
 #contattaci {
     display: flex;
     align-items: center;
@@ -295,7 +305,7 @@ h1 {
 }
 
 #contattaci>a {
-    font-size: 20px;
+    font-size: 2vw;
 }
 
 .contact__links {
@@ -308,6 +318,7 @@ h1 {
 
 .contact__info a {
     text-decoration: underline;
+    font-size: 1.5vw;
 }
 
 .contact__info a:hover {
@@ -372,7 +383,7 @@ footer h2 {
 
 .footerc img {
     padding-left: 4vw;
-    width: 33%;
+    width: 23%;
 }
 
 .footerc__socials {
@@ -486,5 +497,10 @@ footer h2 {
     .menuTendina button:hover {
         color: #1c5e3c;
         cursor: pointer;
+    }
+
+    .footerc img {
+        padding-left: 4vw;
+        width: 33%;
     }
 }

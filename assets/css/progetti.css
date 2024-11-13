@@ -156,6 +156,13 @@
     padding-top: 10vw;
 }
 
+#gallerySection h2{
+    color: #1c5e3c;
+    text-align: center;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+
 .galleryContainer{
     width: 100%;
     justify-items: center;
