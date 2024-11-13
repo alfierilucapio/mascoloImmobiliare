@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pageLoaded = true;
 
     const video = document.getElementById('videoProgetto');
+    const overlayTourVirtuale = document.getElementById('overlayTourVirtuale');
 
     // Controlla se il video è già pronto o aspetta il caricamento
     if (video.readyState >= 3) {  // readyState >= 3 indica che il video è caricato
@@ -57,11 +58,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Aggiungi un listener per l'evento 'ended' del video
+    video.addEventListener('ended', () => {
+        overlayTourVirtuale.style.opacity = '1';
+        console.log("La riproduzione del video è terminata.");
+    });
+
     video.addEventListener('error', (e) => {
         console.error('Errore durante il caricamento del video:', e);
     });
 
-    verificaCaricamentoImmaginiLeggere(); // Verifica il caricamento delle immagini leggere
+    verificaCaricamentoImmaginiLeggere(); // Controlla il caricamento delle immagini leggere
 });
 
 // Funzione per verificare il caricamento delle immagini leggere
