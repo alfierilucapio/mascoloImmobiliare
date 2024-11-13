@@ -369,7 +369,7 @@ footer {
     display: flex;
 }
 
-footer h2 {
+footer h2, footer h2>a{
     margin-inline: 16vw;
     font-size: 1.5vw;
     color: white;
