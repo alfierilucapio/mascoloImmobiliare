@@ -193,6 +193,10 @@ nav ul li a:hover {
     display: block;
 }
 
+.carousel-item img:hover{
+    cursor:pointer;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
     color: white;
