@@ -435,6 +435,10 @@ footer h2 {
         padding: 1.5vh;
     }
 
+    #logo {
+        width: 33%;
+    }
+
     nav ul {
         width: 7.5vw;
     }
@@ -499,8 +503,37 @@ footer h2 {
         cursor: pointer;
     }
 
+    h1, h2{
+        font-size: 7vw;
+    }
+
+    .overlay h2{
+        font-size:9vw;
+    }
+
+    .overlay button{
+        bottom: 4.5vw;
+        font-size: 4vw;
+    }
+
+    p{
+        font-size: 5vw;
+    }
+
+    #contattaci>a{
+        font-size: 5vw;
+    }
+
+    .contact__info a{
+        font-size: 4vw;
+    }
+
     .footerc img {
         padding-left: 4vw;
-        width: 33%;
+        width: 43%;
+    }
+
+    footer h2, .credits a{
+        font-size:2.5vw;
     }
 }
