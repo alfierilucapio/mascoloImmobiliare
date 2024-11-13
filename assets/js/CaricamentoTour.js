@@ -1,57 +1,88 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const schermataCaricamento = document.getElementById("schermata_caricamento");
-    const videoCaricamento = document.getElementById("video_caricamento");
-    const videoProgetto = document.getElementById("videoProgetto");
-  
-    // Flag di controllo per il caricamento delle risorse
-    let domCaricato = false;
-    let immaginiLeggereCaricate = false;
-    let videoCaricato = false;
-  
-    // Funzione per verificare se tutte le condizioni sono soddisfatte
-    function verificaCondizioni() {
-      if (domCaricato && immaginiLeggereCaricate && videoCaricato) {
-        // Nascondiamo la schermata di caricamento e avviamo il video
-        schermataCaricamento.style.display = "none";
-        videoProgetto.play();
-      }
+// Durata della GIF in millisecondi (esempio: 1.71 secondi)
+let gifDuration = 1710;
+let pageLoaded = false;
+let videoLoaded = false;
+let imgLoaded = false;
+
+// Funzione per mostrare la GIF di caricamento
+function mostraGifCaricamento() {
+    const videoCaricamento = document.getElementById('video_caricamento');
+    if (videoCaricamento) {
+        videoCaricamento.style.display = 'block';
+        // Esegui la funzione al termine della durata della GIF
+        setTimeout(onGifEnd, gifDuration);
+    } else {
+        console.warn("Elemento 'video_caricamento' non trovato.");
     }
-  
-    // Impostiamo domCaricato a true subito dopo il caricamento del DOM
-    domCaricato = true;
-  
-    // Funzione per verificare il caricamento delle immagini con data-leggero="true"
-    function verificaImmaginiLeggere() {
-      const immaginiLeggere = document.querySelectorAll('img[data-leggero="true"]');
-      let tutteCaricate = true;
-  
-      immaginiLeggere.forEach((img) => {
-        if (!img.complete) {
-          tutteCaricate = false;
-          img.addEventListener("load", verificaImmaginiLeggere);
+}
+
+// Funzione per nascondere la schermata di caricamento
+function nascondiSchermataCaricamento() {
+    const divCaricamento = document.getElementById('schermata_caricamento');
+    const tour = document.getElementById('tourVirtuale');
+    if (divCaricamento) {
+        divCaricamento.classList.add('hidden');
+        tour.style.display = 'block';
+        setTimeout(() => {
+            divCaricamento.style.display = 'none';
+        }, 500); // Tempo di transizione in millisecondi
+    } else {
+        console.warn("Elemento 'schermata_caricamento' non trovato.");
+    }
+}
+
+// Funzione da eseguire al termine della GIF
+function onGifEnd() {
+    if (pageLoaded && videoLoaded && imgLoaded) {
+        nascondiSchermataCaricamento();
+    } else {
+        // Mantiene il loop finché tutte le risorse non sono caricate
+        setTimeout(onGifEnd, gifDuration);
+    }
+}
+
+// Evento DOMContentLoaded per indicare che la pagina è caricata
+document.addEventListener("DOMContentLoaded", () => {
+    mostraGifCaricamento();
+    pageLoaded = true;
+
+    const video = document.getElementById('videoProgetto');
+
+    video.addEventListener('loadeddata', () => {
+        videoLoaded = true;
+        console.log('Il video è stato caricato completamente.');
+    });
+
+    video.addEventListener('error', (e) => {
+        console.error('Errore durante il caricamento del video:', e);
+    });
+
+    verificaCaricamentoImmaginiLeggere(); // Verifica il caricamento delle immagini leggere
+});
+
+// Funzione per verificare il caricamento delle immagini leggere
+function verificaCaricamentoImmaginiLeggere() {
+    const immaginiLeggere = document.querySelectorAll('[data-leggero="true"]');
+    let immaginiCaricate = 0;
+
+    console.log(`Trovate ${immaginiLeggere.length} immagini leggere.`);
+
+    immaginiLeggere.forEach((img) => {
+        if (img.complete) {
+            immaginiCaricate++;
+            console.log(`Immagine già caricata: ${img.src}`);
+        } else {
+            img.addEventListener('load', () => {
+                immaginiCaricate++;
+                console.log(`Immagine caricata: ${img.src}`);
+                if (immaginiCaricate === immaginiLeggere.length) {
+                    imgLoaded = true;
+                }
+            });
         }
-      });
-  
-      if (tutteCaricate) {
-        immaginiLeggereCaricate = true;
-        verificaCondizioni();
-      }
+    });
+
+    if (immaginiCaricate === immaginiLeggere.length) {
+        imgLoaded = true;
     }
-  
-    // Verifica il caricamento completo del video
-    videoProgetto.addEventListener("loadeddata", function() {
-      videoCaricato = true;
-      verificaCondizioni();
-    });
-  
-    // Evento di fine riproduzione per la GIF di caricamento
-    videoCaricamento.addEventListener("ended", function() {
-      videoCaricamento.loop = true; // Abilita il loop della GIF di caricamento
-      verificaImmaginiLeggere();
-      verificaCondizioni();
-    });
-  
-    // Attiva il loop sulla GIF di caricamento e avvia la riproduzione
-    videoCaricamento.loop = true;
-    videoCaricamento.play();
-  });  
+}
