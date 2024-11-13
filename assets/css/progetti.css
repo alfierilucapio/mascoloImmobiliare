@@ -4,7 +4,7 @@
 
 #tourVirtuale h1 {
     text-transform: uppercase;
-    padding-top: 7.5vh;
+    padding-top: 10vh;
 }
 
 .tourVideoContainer {
@@ -285,6 +285,10 @@
     .thumbnailContainer{
         width: 30vw;
         height: 30vw;
+    }
+
+    #tourVirtuale h1 {
+        padding-top: 7.5vh;
     }
 
     .overlayTourVirtuale h2{
