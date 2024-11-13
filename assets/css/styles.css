@@ -369,11 +369,15 @@ footer {
     display: flex;
 }
 
-footer h2, footer h2>a{
+footer h2 {
     margin-inline: 16vw;
     font-size: 1.5vw;
     color: white;
     text-align: center;
+}
+
+footer h2>a {
+    color: white;
 }
 
 .footerc {
