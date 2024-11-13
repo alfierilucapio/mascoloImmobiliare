@@ -36,7 +36,7 @@ function onGifEnd() {
     if (pageLoaded && videoLoaded && imgLoaded) {
         nascondiSchermataCaricamento();
     } else {
-        // Mantiene il loop finché tutte le risorse non sono caricate
+        // Se le condizioni non sono soddisfatte, riprova dopo gifDuration
         setTimeout(onGifEnd, gifDuration);
     }
 }
@@ -47,11 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
     pageLoaded = true;
 
     const video = document.getElementById('videoProgetto');
-
-    video.addEventListener('loadeddata', () => {
+    
+    // Verifica il caricamento del video
+    if (video.readyState >= 3) {  // Controlla se il video è già caricato
         videoLoaded = true;
-        console.log('Il video è stato caricato completamente.');
-    });
+    } else {
+        video.addEventListener('loadeddata', () => {
+            videoLoaded = true;
+            console.log('Il video è stato caricato completamente.');
+        });
+    }
 
     video.addEventListener('error', (e) => {
         console.error('Errore durante il caricamento del video:', e);
@@ -70,11 +75,9 @@ function verificaCaricamentoImmaginiLeggere() {
     immaginiLeggere.forEach((img) => {
         if (img.complete) {
             immaginiCaricate++;
-            console.log(`Immagine già caricata: ${img.src}`);
         } else {
             img.addEventListener('load', () => {
                 immaginiCaricate++;
-                console.log(`Immagine caricata: ${img.src}`);
                 if (immaginiCaricate === immaginiLeggere.length) {
                     imgLoaded = true;
                 }
@@ -82,6 +85,7 @@ function verificaCaricamentoImmaginiLeggere() {
         }
     });
 
+    // Imposta imgLoaded a true se tutte le immagini sono già caricate
     if (immaginiCaricate === immaginiLeggere.length) {
         imgLoaded = true;
     }
