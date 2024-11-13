@@ -89,6 +89,7 @@ nav {
 }
 
 #logo{
+    height: auto;
     width: 13%;
 }
 
@@ -436,7 +437,7 @@ footer h2 {
     }
 
     #logo {
-        width: 33%;
+        width: 40%;
     }
 
     nav ul {

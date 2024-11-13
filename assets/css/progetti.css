@@ -35,8 +35,9 @@
 }
 
 .overlayTourVirtuale h2 {
+    color: white;
     padding-top: 3vw;
-    font-size:20px;
+    font-size:2.5vw;
     text-transform: uppercase;
 }
 
@@ -79,7 +80,7 @@
 
 .caratteristiche>p {
     color: #1c5e3c;
-    font-size: 20px;
+    font-size: 2.5vw;
     padding-top: 5vw;
 }
 
@@ -124,7 +125,7 @@
 #spanMappa {
     text-align: center;
     padding: 2.5vw;
-    font-size: 15px;
+    font-size: 1.5vw;
 }
 
 .infoButtons {
@@ -284,5 +285,21 @@
     .thumbnailContainer{
         width: 30vw;
         height: 30vw;
+    }
+
+    .overlayTourVirtuale h2{
+        font-size: 4.5vw;
+    }
+
+    .caratteristiche>p{
+        font-size: 5vw;
+    }
+
+    #spanBrochure, #spanMappa {
+        font-size: 4.3vw;
+    }
+
+    .iconCard>p {
+        font-size: 4.3vw;
     }
 }
