@@ -1,12 +1,15 @@
 // Durata della GIF in millisecondi (1.71 secondi)
-const gifDuration = 1710;
+let gifDuration = 1710;
+let pageLoaded = false;
+let videoLoaded = false;
+let imgLoaded = false;
 
 // Funzione per mostrare la GIF di caricamento
 function mostraGifCaricamento() {
     const videoCaricamento = document.getElementById('video_caricamento');
     if (videoCaricamento) {
         videoCaricamento.style.display = 'block';
-        setTimeout(onGifEnd, gifDuration); // Avvia la verifica dopo il primo ciclo GIF
+        setTimeout(onGifEnd, gifDuration); // Controlla il caricamento alla fine della GIF
     } else {
         console.warn("Elemento 'video_caricamento' non trovato.");
     }
@@ -27,57 +30,62 @@ function nascondiSchermataCaricamento() {
     }
 }
 
-// Funzione da eseguire al termine della GIF, verificando le risorse caricate
+// Funzione da eseguire al termine della GIF
 function onGifEnd() {
-    Promise.all([domReady, videoReady, immaginiLeggereCaricate]).then(() => {
+    if (pageLoaded && videoLoaded && imgLoaded) {
         nascondiSchermataCaricamento();
-    }).catch(() => {
-        // Se una risorsa non è pronta, riavvia il controllo alla fine del prossimo ciclo GIF
+    } else {
+        // Se le condizioni non sono ancora soddisfatte, riprova dopo gifDuration
         setTimeout(onGifEnd, gifDuration);
-    });
+    }
 }
 
-// Promise per il caricamento del DOM
-const domReady = new Promise((resolve) => {
-    document.addEventListener("DOMContentLoaded", () => {
-        mostraGifCaricamento();
-        resolve(true);
-    });
-});
+// Evento DOMContentLoaded per indicare che la pagina è caricata
+document.addEventListener("DOMContentLoaded", () => {
+    mostraGifCaricamento();
+    pageLoaded = true;
 
-// Promise per il caricamento del video
-const videoReady = new Promise((resolve, reject) => {
     const video = document.getElementById('videoProgetto');
-    if (video.readyState >= 3) {  // Controlla se il video è già caricato
-        resolve(true);
+
+    // Controlla se il video è già pronto o aspetta il caricamento
+    if (video.readyState >= 3) {  // readyState >= 3 indica che il video è caricato
+        videoLoaded = true;
     } else {
-        video.addEventListener('loadeddata', () => resolve(true));
-        video.addEventListener('error', (e) => {
-            console.error('Errore durante il caricamento del video:', e);
-            reject(false);
+        video.addEventListener('loadeddata', () => {
+            videoLoaded = true;
+            console.log('Il video è stato caricato completamente.');
         });
     }
+
+    video.addEventListener('error', (e) => {
+        console.error('Errore durante il caricamento del video:', e);
+    });
+
+    verificaCaricamentoImmaginiLeggere(); // Verifica il caricamento delle immagini leggere
 });
 
-// Promise per il caricamento delle immagini leggere
-const immaginiLeggereCaricate = new Promise((resolve) => {
+// Funzione per verificare il caricamento delle immagini leggere
+function verificaCaricamentoImmaginiLeggere() {
     const immaginiLeggere = document.querySelectorAll('[data-leggero="true"]');
-    let immaginiDaCaricare = immaginiLeggere.length;
+    let immaginiCaricate = 0;
+
+    console.log(`Trovate ${immaginiLeggere.length} immagini leggere.`);
+
     immaginiLeggere.forEach((img) => {
         if (img.complete) {
-            immaginiDaCaricare--;
+            immaginiCaricate++;
         } else {
             img.addEventListener('load', () => {
-                immaginiDaCaricare--;
-                if (immaginiDaCaricare === 0) {
-                    resolve(true);
+                immaginiCaricate++;
+                if (immaginiCaricate === immaginiLeggere.length) {
+                    imgLoaded = true;
                 }
             });
         }
     });
 
     // Se tutte le immagini sono già caricate
-    if (immaginiDaCaricare === 0) {
-        resolve(true);
+    if (immaginiCaricate === immaginiLeggere.length) {
+        imgLoaded = true;
     }
-});
+}
