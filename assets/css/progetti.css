@@ -153,6 +153,10 @@
     padding: 5px;
 }
 
+.buttonCard button{
+    width: 100%;
+}
+
 #gallerySection{
     padding-top: 10vw;
 }
