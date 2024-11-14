@@ -57,7 +57,7 @@ html {
 }
 
 a {
-    color: black;
+    color: #2e2e2e;
     text-decoration: none;
 }
 
@@ -488,11 +488,11 @@ footer h2>a {
         font-size: 30px;
         border: none;
         background-color: #f2f0eb;
-        color: black;
+        color: #2e2e2e;
     }
 
     .menuTendina ul {
-        color: black;
+        color: #2e2e2e;
         display: flex;
         text-align: center;
         vertical-align: center;
