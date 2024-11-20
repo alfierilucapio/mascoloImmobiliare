@@ -98,39 +98,78 @@
 
 
     <div id="homePage">
+        <!--inserire Spazio bianco tra carosello e navbar-->
+        <!--Font size scopri di più minore-->
+        <!--border radius al bottone + colore overlay verde-->
+        <!--carosello schermo intero-->
+        <!--Inserire tutto esaurito su villa aria, ville calù, parco zeno ultima disponibilità-->
+        <!--Inserire mappa in fondo la sezione contatti-->
+        <!--Cambiare il resto dei numeri-->
+        <!--togliere video dai progetti e sostituire con copertina-->
+        <!--cambiare interno ed esterno con interni ed esterni-->
+        <!--inserire descrizione e caratteristiche su due colonne da desktop-->
+        <!--inserire mappa su progetti-->
+        <!--cambiare descrizioni progetti-->
+        <!--cambiare caratteristiche progetti-->
+
         <div class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <!-- <img src="assets/images/Ville Calù 1.jpeg" alt="Ville Calù"> -->
-                    <!-- <div class="overlay"> -->
-                    <img src="./assets/images/IconeELoghi/villeCaluLogo.png" alt="Logo di Ville Calù"
-                        onclick="window.location.href='./assets/html/villeCalu.html'">
-                    <!-- <a href="#" class="button-overlay">Scopri di Più</a> -->
-                    <!-- </div> -->
+                    <img src="./assets/images/IconeELoghi/Ville Calù 1.jpeg" alt="Ville Calù">
+                    <div class="overlay">
+                        <img src="./assets/images/IconeELoghi/villeCaluLogo.png" alt="Logo di Ville Calù"
+                            onclick="window.location.href='./assets/html/villeCalu.html'">
+                        <!-- <a href="#" class="button-overlay">Scopri di Più</a> -->
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <!-- <img src="assets/images/Parco Zeno 1.png" alt="Parco Zeno"> -->
-                    <!-- <div class="overlay"> -->
-                    <img src="./assets/images/IconeELoghi/parcoZenoLogo.png" alt="Logo del Parco Zeno"
-                        onclick="window.location.href='./assets/html/parcoZeno.html'">
-                    <!-- <a href="#" class="button-overlay">Scopri di Più</a> -->
-                    <!-- </div> -->
+                    <img src="./assets/images/IconeELoghi/Parco Zeno 1.png" alt="Parco Zeno">
+                    <div class="overlay">
+                        <img src="./assets/images/IconeELoghi/parcoZenoLogo.png" alt="Logo del Parco Zeno"
+                            onclick="window.location.href='./assets/html/parcoZeno.html'">
+                        <!-- <a href="#" class="button-overlay">Scopri di Più</a> -->
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <!-- <img src="assets/images/Villa Aria 1.png" alt="Villa Aria"> -->
-                    <!-- <div class="overlay"> -->
-                    <img src="./assets/images/IconeELoghi/villaAriaLogo.png" alt="Logo di Villa Aria"
-                        onclick="window.location.href='./assets/html/villaAria.html'">
-                    <!-- <a href="#" class="button-overlay">Scopri di Più</a> -->
-                    <!-- </div> -->
+                    <img src="./assets/images/IconeELoghi/Villa Aria 1.png" alt="Villa Aria">
+                    <div class="overlay">
+                        <img src="./assets/images/IconeELoghi/villaAriaLogo.png" alt="Logo di Villa Aria"
+                            onclick="window.location.href='./assets/html/villaAria.html'">
+                        <!-- <a href="#" class="button-overlay">Scopri di Più</a> -->
+                    </div>
                 </div>
+            </div>
+            <div class="scrolldown" onclick="window.location.href='#about'">
+                <svg viewBox="0 0 32 50" xmlns="http://www.w3.org/2000/svg" class="double-arrow">
+                    <title>Doppia Freccia</title>
+                    <g data-name="Layer 2" id="Layer_2">
+                        <path class="color-change"
+                            d="M16,21a1,1,0,0,1-.71-.29l-8-8a1,1,0,1,1,1.42-1.42L16,18.59l7.29-7.3a1,1,0,0,1,1.42,1.42l-8,8A1,1,0,0,1,16,21Z" />
+                        <path class="color-change"
+                            d="M16,29a1,1,0,0,1-.71-.29l-8-8a1,1,0,1,1,1.42-1.42L16,26.59l7.29-7.3a1,1,0,0,1,1.42,1.42l-8,8A1,1,0,0,1,16,29Z" />
+                    </g>
+                    <g id="frame">
+                        <rect class="cls-1" height="32" width="32" />
+                    </g>
+                </svg>
             </div>
             <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
             <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
         </div>
 
+        <section id="about">
+            <div id="suDiNoi">
+                <h2 class="reveal-bottom">Chi siamo</h2>
+                <p class="reveal-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad
+                    repudiandae
+                    perferendis adipisci
+                    illum explicabo sequi numquam magnam in maxime, expedita esse atque ut. At natus nesciunt cum nihil
+                    dolores!</p>
+            </div>
+        </section>
+
         <section id="progetti">
-            <h1 class="reveal-bottom">Le nostre proposte</h1>
+            <h1 class="reveal-bottom">I nostri progetti</h1>
             <div id="villeCalu">
                 <img src="./assets/images/IconeELoghi/Ville Calù 1.jpeg" alt="Ville Calù">
                 <div class="overlay reveal-opacity">
@@ -159,21 +198,10 @@
             </div>
         </section>
 
-        <section id="about">
-            <div id="suDiNoi">
-                <h2 class="reveal-bottom">Chi siamo</h2>
-                <p class="reveal-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ad
-                    repudiandae
-                    perferendis adipisci
-                    illum explicabo sequi numquam magnam in maxime, expedita esse atque ut. At natus nesciunt cum nihil
-                    dolores!</p>
-            </div>
-        </section>
-
         <section id="contatti">
             <div id="contattaci">
-                <h2 class="reveal-bottom">Sei in possesso di terreni edificabili?</h2>
-                <a class="reveal-bottom" href="https://wa.me/393298070190">Contattaci!</a>
+                <h2 class="reveal-bottom">Sei interessato alle nostre proposte?</h2>
+                <a class="reveal-bottom" href="https://wa.me/393296745955">Contattaci!</a>
                 <div class="contact__links">
 
                     <div class="contact__icon-box reveal-bottom">
@@ -188,7 +216,7 @@
                         </span>
                         <!-- Cell -->
                         <div class="contact__info">
-                            <a href="tel:+393298070190">3298070190</a>
+                            <a href="tel:+393296745955">3296745955</a>
                         </div>
                     </div>
 
@@ -233,7 +261,7 @@
 
         <!-- Icona WhatsApp -->
         <div class="floating-icon">
-            <a href="https://wa.me/393298070190">
+            <a href="https://wa.me/393296745955">
                 <svg width="45px" height="45px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -273,7 +301,7 @@
                 <div class="footerc__socials">
                     <!-- whatsapp -->
                     <div class="contact__icon-box">
-                        <a href="https://wa.me/393298070190">
+                        <a href="https://wa.me/393296745955">
                             <svg fill="#2e2e2e" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px"
                                 viewBox="0 0 30.667 30.667" xml:space="preserve" stroke="#2e2e2e">
@@ -332,7 +360,7 @@
             <div class="footerCopy">
                 <h2>
                     Strada Statale 7 Bis, 80035, Nola, Napoli<br>
-                    Tel +39 3298070190<br>
+                    Tel +39 3296745955<br>
                     info@mascoloimmobiliare.it<br>
                     &copy 2024 Mascolo Immobiliare. Tutti i diritti riservati.
                 </h2>

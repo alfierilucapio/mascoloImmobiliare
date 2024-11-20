@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color:#f2f0eb;
+    background-color: #f2f0eb;
     max-width: 100vw;
     /* Imposta la larghezza massima al 100% della larghezza della viewport */
     margin: 0 auto;
@@ -67,7 +67,7 @@ a {
     position: fixed;
     left: 0;
     top: 0;
-    background-color:#f2f0eb;
+    background-color: #f2f0eb;
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -89,7 +89,7 @@ nav {
     z-index: 1000;
 }
 
-#logo{
+#logo {
     height: auto;
     width: 13%;
 }
@@ -167,15 +167,20 @@ nav ul li a:hover {
 }
 
 .carousel {
-    background-color: #496959;
+    background-color: #1c5e3c;
     position: relative;
+    height: 100vh;
     width: 100%;
     max-width: 100vw;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-inner {
+    height: 100vh;
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -190,12 +195,13 @@ nav ul li a:hover {
 }
 
 .carousel-item img {
-    height: 35%;
+    width: 100vw;
+    object-fit: cover;
     display: block;
 }
 
-.carousel-item img:hover{
-    cursor:pointer;
+.carousel-item img:hover {
+    cursor: pointer;
 }
 
 .carousel-control-prev,
@@ -219,12 +225,88 @@ nav ul li a:hover {
     z-index: 1;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Colore di sfondo semi-trasparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay img {
+    max-width: 30%;
+    height: auto;
+}
+
 .carousel-control-prev {
     left: 15px;
 }
 
 .carousel-control-next {
     right: 15px;
+}
+
+.scrolldown {
+    position: absolute;
+    width: 100vw;
+    bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrolldown svg {
+    width: 5vw;
+}
+
+.scrolldown svg:hover {
+    cursor: pointer;
+}
+
+.double-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cls-1 {
+    fill: none;
+}
+
+.color-change {
+    animation: colorChange 2s infinite, moveUpDown 2s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        fill: #f2f0eb;
+    }
+
+    50% {
+        fill: grey;
+    }
+
+    100% {
+        fill: #f2f0eb;
+    }
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(1vh);
+    }
 }
 
 #progetti {
@@ -276,16 +358,17 @@ nav ul li a:hover {
     font-size: 2.8vw;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: #1c5e3c;
     text-align: center;
     padding-top: 4vw;
     padding-bottom: 4vw;
-    font-size:2.5vw;
+    font-size: 2.5vw;
 }
 
 .overlay h2 {
-    color:#f2f0eb;
+    color: #f2f0eb;
     text-align: center;
     text-transform: uppercase;
     font-size: 6vw;
@@ -366,7 +449,7 @@ footer {
     flex-direction: column;
     padding: 2vw;
     width: 100%;
-    background-color: #496959;
+    background-color: #1c5e3c;
     margin-top: 4vw;
 }
 
@@ -513,28 +596,43 @@ footer h2>a {
         cursor: pointer;
     }
 
-    h1, h2{
+    h1,
+    h2 {
         font-size: 7vw;
     }
 
-    .overlay h2{
-        font-size:8.3vw;
+    .carousel-item img {
+        height: 100vh;
     }
 
-    .overlay button{
+    .overlay img {
+        width: 70vw;
+        max-width: 100vw;
+        height: max-content;
+    }
+
+    .scrolldown svg {
+        width: 10vw;
+    }
+
+    .overlay h2 {
+        font-size: 8.3vw;
+    }
+
+    .overlay button {
         bottom: 4.5vw;
         font-size: 3.3vw;
     }
 
-    p{
+    p {
         font-size: 5vw;
     }
 
-    #contattaci>a{
+    #contattaci>a {
         font-size: 5vw;
     }
 
-    .contact__info a{
+    .contact__info a {
         font-size: 4vw;
     }
 
@@ -543,7 +641,8 @@ footer h2>a {
         width: 43%;
     }
 
-    footer h2, .credits a{
-        font-size:2.5vw;
+    footer h2,
+    .credits a {
+        font-size: 2.5vw;
     }
 }
