@@ -275,6 +275,7 @@ nav ul li a:hover {
     left: 50%;
     transform: translateX(-50%);
 }
+
 .cls-1 {
     fill: none;
 }
@@ -435,7 +436,7 @@ p {
     padding-bottom: 15vw;
 }
 
-#mappaUfficio{
+#mappaUfficio {
     margin-top: 4vh;
 }
 

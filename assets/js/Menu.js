@@ -3,23 +3,23 @@ let count = 0;
 let isOpen = false;
 const navMenu = document.querySelector("#navMenu");
 
-navMenu.addEventListener("click", ()=>{
+navMenu.addEventListener("click", () => {
     animazioneMenu();
 });
 
-function animazioneMenu(){
+function animazioneMenu() {
     navMenu.classList.toggle("active");
 }
 
 function mostraDiv() {
     let isCountEven = count % 2 === 0;
-    
+
     let mainPage = document.getElementById('homePage');
     let div = document.getElementById('mobileMenu');
 
     if (isCountEven) {
         div.style.display = 'block';
-        
+
         setTimeout(() => {
             mainPage.style.visibility = 'hidden';
         }, 750);
@@ -37,7 +37,7 @@ function mostraDiv() {
     } else {
         div.style.top = "-100%";
         div.style.pointerEvents = "none";
-        
+
         mainPage.style.visibility = 'visible';
         setTimeout(() => {
             div.style.display = 'none';
