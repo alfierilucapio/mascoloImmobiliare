@@ -1,4 +1,4 @@
-.copertina img{
+.copertina img {
     padding-top: 9vh;
     width: 100%;
     height: auto;
@@ -67,8 +67,9 @@
 
 #spanBrochure,
 #spanMappa {
+    margin-right: 2vh;
     text-align: center;
-    padding: 2.5vw;
+    color: white;
     font-size: 1.5vw;
 }
 
@@ -83,7 +84,7 @@
 .infoButtons button {
     border: none;
     background-color: #1c5e3c;
-    padding: 10px;
+    padding: 4vw;
     padding-inline: 40px;
 }
 
@@ -97,7 +98,15 @@
     padding: 5px;
 }
 
+.brochureButton svg {
+    height: 5vw;
+    width: 5vw;
+}
+
 .buttonCard button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 9vh;
     width: 100%;
 }
@@ -253,6 +262,23 @@
 
     .overlayTourVirtuale h2 {
         font-size: 4.5vw;
+    }
+
+    #descrizione p {
+        text-align: center;
+    }
+
+    .buttonCard button {
+        height: auto;
+    }
+
+    .infoButtons button {
+        padding-inline: 15vw;
+    }
+
+    .brochureButton svg {
+        height: 15vw;
+        width: 15vw;
     }
 
     .caratteristiche>p {
