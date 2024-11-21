@@ -195,9 +195,10 @@ nav ul li a:hover {
 }
 
 .carousel-item img {
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    display: block;
+    object-position: right;
 }
 
 .carousel-item img:hover {
@@ -611,10 +612,6 @@ footer h2>a {
     h1,
     h2 {
         font-size: 7vw;
-    }
-
-    .carousel-item img {
-        height: 100vh;
     }
 
     .overlay img {
