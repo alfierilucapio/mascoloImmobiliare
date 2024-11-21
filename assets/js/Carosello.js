@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-control-next');
     let currentIndex = 1; // Iniziamo con il primo elemento "vero"
     let autoSlideInterval;
+    let isTransitioning = false; // Variabile per prevenire doppio click
 
     // Duplica la prima e l'ultima slide per creare un effetto di continuità
     const firstClone = items[0].cloneNode(true);
@@ -24,25 +25,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Funzione per aggiornare la slide con gestione del ciclo continuo
     function updateSlide(newIndex) {
+        if (isTransitioning) return; // Prevenire aggiornamenti durante la transizione
+        isTransitioning = true;
         carouselInner.style.transition = 'transform 0.5s ease-in-out';
         currentIndex = newIndex;
 
         carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
 
-        // Gestione del loop dopo l'animazione
-        carouselInner.addEventListener('transitionend', () => {
-            if (currentIndex === 0) {
-                // Se siamo all'inizio, salta alla fine reale
-                carouselInner.style.transition = 'none';
-                currentIndex = extendedItems.length - 2;
-                carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-            } else if (currentIndex === extendedItems.length - 1) {
-                // Se siamo alla fine, salta all'inizio reale
-                carouselInner.style.transition = 'none';
-                currentIndex = 1;
-                carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
-        });
+    // Funzione per gestire la fine della transizione
+    function handleTransitionEnd() {
+        if (currentIndex === 0) {
+            // Se siamo all'inizio, salta alla fine reale
+            carouselInner.style.transition = 'none';
+            currentIndex = extendedItems.length - 2;
+            carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        } else if (currentIndex === extendedItems.length - 1) {
+            // Se siamo alla fine, salta all'inizio reale
+            carouselInner.style.transition = 'none';
+            currentIndex = 1;
+            carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        isTransitioning = false; // Fine della transizione
     }
 
     // Funzione per avviare lo scorrimento automatico
@@ -72,4 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Imposta la prima slide come attiva e avvia lo scorrimento automatico
     extendedItems[currentIndex].classList.add('active');
     startAutoSlide();
+
+    // Aggiungi l'event listener per la fine della transizione
+    carouselInner.addEventListener('transitionend', handleTransitionEnd);
 });
