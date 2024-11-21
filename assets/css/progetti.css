@@ -1,4 +1,4 @@
-#tourVirtuale {
+/* #tourVirtuale {
     display: none;
 }
 
@@ -22,11 +22,9 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    /* Sfondo semi-trasparente */
     color: #f2f0eb;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    /* Transizione di 0.5 secondi */
     cursor: pointer;
 }
 
@@ -39,7 +37,7 @@
     padding-top: 3vw;
     font-size: 2.5vw;
     text-transform: uppercase;
-}
+} */
 
 /* .overlayTourVirtuale button{
     position: absolute;
@@ -60,6 +58,13 @@
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 2.8vw;
 } */
+
+.copertina img{
+    padding-top: 9vh;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+}
 
 #descrizione,
 #caratteristiche {
@@ -154,24 +159,22 @@
 }
 
 .buttonCard button {
+    height: 9vh;
     width: 100%;
 }
 
 .mappa {
+    padding-top: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#gallerySection {
-    padding-top: 10vw;
-}
-
 #gallerySection h2 {
     color: #1c5e3c;
     text-align: center;
-    padding-top: 4vw;
+    padding-top: 10vw;
     padding-bottom: 4vw;
 }
 
