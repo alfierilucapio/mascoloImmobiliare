@@ -1,8 +1,17 @@
+@font-face {
+    font-family: 'Kiona';
+    src: url('../fonts/Kiona-Regular.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     max-width: 100vw;
+    font-family: "Kiona";
+}
+
+p,a,.footerCopy h2{
     font-family: "Playfair Display", serif;
 }
 
@@ -340,8 +349,9 @@ nav ul li a:hover {
     margin-bottom: 10vw;
 }
 
-#progetti div {
+#progetti>div {
     position: relative;
+    margin-bottom: 3.5vw;
 }
 
 #progetti img {
@@ -355,7 +365,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     /* Colore di sfondo semi-trasparente */
     display: flex;
     flex-direction: column;
@@ -368,10 +378,11 @@ nav ul li a:hover {
 .overlay button {
     position: absolute;
     color: #f2f0eb;
-    background-color: #1c5e3c40;
-    border-radius: 50px;
-    border: 1px solid #f2f0eb;
-    padding: 1.2vh;
+    background-color: #1c5e3ca7;
+    border-radius: 100px;
+    border: 3.5px solid #f2f0ebc2;
+    padding: 1.5vw;
+    padding-inline: 3vw;
     text-decoration: none;
     text-transform: uppercase;
     bottom: 8.5vw;
@@ -382,7 +393,7 @@ nav ul li a:hover {
 
 .overlay button:hover {
     cursor: pointer;
-    background-color: #1c5e3c80;
+    background-color: #1c5e3ca7;
     font-size: 2.8vw;
 }
 
@@ -399,18 +410,27 @@ h2 {
     color: #f2f0eb;
     text-align: center;
     text-transform: uppercase;
+    padding: 0;
     font-size: 6vw;
+}
+
+.overlay h3 {
+    color: #f2f0eb;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3.5vw;
 }
 
 .overlay p {
     position: absolute;
     left: 0;
-    top: 2vw;
-    font-size: 3vw;
+    top: 5vw;
+    font-size: 2.7vw;
     padding: 1vw;
     padding-inline: 3vw;
-    width: 50%;
-    background-color: rgba(255, 0, 0, 0.25);
+    background-color: rgb(200, 0, 0);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 #about {
