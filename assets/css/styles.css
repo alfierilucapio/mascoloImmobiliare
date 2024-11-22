@@ -645,10 +645,6 @@ footer h2>a {
         height: max-content;
     }
 
-    .scrolldown {
-        bottom: 15vh;
-    }
-
     .scrolldown svg {
         width: 10vw;
     }

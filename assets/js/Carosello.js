@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Funzione per aggiornare l'altezza dinamicamente
+    function adjustCarouselHeight() {
+        const carousel = document.querySelector('.carousel');
+        carousel.style.height = `${window.innerHeight}px`;
+    }
+
+    // Inizializza l'altezza del carosello
+    adjustCarouselHeight();
+
+    // Aggiungi un listener per l'evento di resize
+    window.addEventListener('resize', adjustCarouselHeight);
+
     const items = Array.from(document.querySelectorAll('.carousel-item'));
     const carouselInner = document.querySelector('.carousel-inner');
     const prevButton = document.querySelector('.carousel-control-prev');
