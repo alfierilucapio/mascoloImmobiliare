@@ -273,6 +273,7 @@
     }
 
     .infoButtons button {
+        padding: 2vw;
         padding-inline: 15vw;
     }
 
