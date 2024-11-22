@@ -636,7 +636,8 @@ footer h2>a {
 
     h1,
     h2 {
-        font-size: 7vw;
+        font-size: 5.5vw;
+        margin-top: 2vh;
     }
 
     .overlay img {
@@ -659,7 +660,7 @@ footer h2>a {
     }
 
     p {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     #contattaci>a {
