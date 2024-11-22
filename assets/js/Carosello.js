@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     adjustCarouselHeight();
 
     // Aggiungi un listener per l'evento di resize
-    window.addEventListener('resize', adjustCarouselHeight);
+    //window.addEventListener('resize', adjustCarouselHeight);
 
     const items = Array.from(document.querySelectorAll('.carousel-item'));
     const carouselInner = document.querySelector('.carousel-inner');
