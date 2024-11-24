@@ -194,6 +194,10 @@ nav ul li a:hover {
     transition: transform 0.5s ease-in-out;
 }
 
+.carousel-inner:hover{
+    cursor: pointer;
+}
+
 .villeCalu,
 .parcoZeno,
 .villaAria {
