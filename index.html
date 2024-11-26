@@ -10,12 +10,26 @@
     <link rel="shortcut icon" href="./assets/images/IconeELoghi/favicon.ico">
 
     <!-- TITOLO -->
-    <title>Mascolo Immobiliare</title>
+    <title>Mascolo Immobiliare | Vendita Case e Progetti Esclusivi</title>
 
     <!-- META DESCRIPTION -->
     <meta name="description"
-        content="Mascolo Immobiliare - Agenzia dinamica e innovativa specializzata nella vendita di proprietà esclusive. Trova la casa dei tuoi sogni con noi.">
-    <meta name="keywords" content="immobiliare, vendita case, proprietà esclusive, Mascolo Immobiliare">
+        content="Mascolo Immobiliare: agenzia immobiliare specializzata nella vendita di case e proprietà esclusive. Scopri i nostri progetti su misura.">
+
+    <!-- META OG (Open Graph) -->
+    <meta property="og:title" content="Mascolo Immobiliare | Vendita Case e Progetti Esclusivi">
+    <meta property="og:description"
+        content="Agenzia immobiliare specializzata nella vendita di case e proprietà esclusive.">
+    <meta property="og:image" content="https://esempio.com/path/to/immagine.jpg">
+    <meta property="og:url" content="https://www.mascoloimmobiliare.it">
+    <meta property="og:type" content="website">
+
+    <!-- META TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mascolo Immobiliare | Vendita Case e Progetti Esclusivi">
+    <meta name="twitter:description"
+        content="Agenzia immobiliare specializzata nella vendita di case e proprietà esclusive.">
+    <meta name="twitter:image" content="https://esempio.com/path/to/immagine.jpg">
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,19 +42,18 @@
 
     <!-- CARICAMENTO -->
     <script src="./assets/js/Caricamento.js"></script>
-
 </head>
 
 <body>
     <div id="schermata_caricamento" class="fade-out">
         <img id="video_caricamento" src="./assets/images/IconeELoghi/CaricamentoMascoloImmobiliare-transparente.gif"
-            alt="Gif di caricamento">
+            alt="Gif di caricamento Mascolo Immobiliare">
     </div>
 
     <header>
         <nav>
-            <img id="logo" src="./assets/images/IconeELoghi/logo.png" alt="logo"
-                onclick="window.location.href='#homePage'">
+            <img id="logo" src="./assets/images/IconeELoghi/logo.png"
+                alt="Logo Mascolo Immobiliare - Agenzia di Vendita Case" onclick="window.location.href='#homePage'">
             <ul>
                 <li>
                     <a href="#homePage">HOME</a>
@@ -101,7 +114,8 @@
 
         <div class="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item villeCalu active" onclick="window.location.href='./assets/html/villeCalu.html'">
+                <div class="carousel-item villeCalu active"
+                    onclick="window.location.href='./assets/html/villeCalu.html'">
                 </div>
                 <div class="carousel-item parcoZeno" onclick="window.location.href='./assets/html/parcoZeno.html'">
                 </div>
@@ -153,7 +167,7 @@
         <section id="progetti">
             <h1 class="reveal-bottom">I nostri progetti</h1>
             <div id="villeCalu">
-                <img src="./assets/images/villeCalu/esterno/8-thumb.jpg" alt="Ville Calù">
+                <img src="./assets/images/villeCalu/esterno/8-thumb.jpg" alt="Ville Calù a Roccarainola">
                 <div class="overlay reveal-opacity">
                     <p>Disponibilità terminata</p>
                     <h2 class="reveal-zoom">Ville Calù</h2>
@@ -164,7 +178,7 @@
             </div>
 
             <div id="parcoZeno">
-                <img src="./assets/images/parcoZeno/esterno/1-thumb.jpg" alt="Parco Zeno">
+                <img src="./assets/images/parcoZeno/esterno/1-thumb.jpg" alt="Parco Zeno a Roccarainola">
                 <div class="overlay reveal-opacity">
                     <h2 class="reveal-zoom">Parco Zeno</h2>
                     <h3 class="reveal-zoom">Roccarainola</h3>
@@ -174,7 +188,7 @@
             </div>
 
             <div id="villaAria">
-                <img src="./assets/images/villaAria/1-thumb.jpg" alt="Villa Aria">
+                <img src="./assets/images/villaAria/1-thumb.jpg" alt="Villa Aria a Roccarainola">
                 <div class="overlay reveal-opacity">
                     <p>Disponibilità terminata</p>
                     <h2 class="reveal-zoom">Villa Aria</h2>
@@ -374,7 +388,27 @@
 
     <!--Carosello-->
     <script src="./assets/js/Carosello.js"></script>
-    
+
+    <!-- Microdati Schema.org -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Mascolo Immobiliare",
+            "url": "https://www.mascoloimmobiliare.it",
+            "logo": "https://esempio.com/path/to/logo.jpg",
+            "telephone": "+39 3296745955",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Strada Statale 7 Bis",
+                "addressLocality": "Nola",
+                "addressRegion": "NA",
+                "postalCode": "80035",
+                "addressCountry": "IT"
+            }
+        }
+        </script>
+
 </body>
 
 </html>
