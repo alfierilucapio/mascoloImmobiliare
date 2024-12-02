@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://alfierilucapio.github.io/mascoloImmobiliare/sitemap.xml
+Sitemap: http://mascoloimmobiliare.it/sitemap.xml
